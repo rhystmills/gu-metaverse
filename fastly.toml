@@ -1,0 +1,17 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["rhystmills@gmail.com"]
+description = "My thing"
+language = "javascript"
+manifest_version = 2
+name = "fastly-hack"
+service_id = "3lMtj6L2MVnoAZlMzvGlFs"
+[local_server]
+  [local_server.backends]
+    [local_server.backends.guardian]
+      url = "https://www.theguardian.com"
+    [local_server.backends.upstash-db]
+      url = "https://eu1-capital-serval-34694.upstash.io"
+    [local_server.backends.aws_dynamodb]
+        url = "https://dynamodb.eu-west-1.amazonaws.com"
